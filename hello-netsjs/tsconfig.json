@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    // 1. 컴파일러 옵션
+    "module": "CommonJS", // 2. 모듈 시스템
+    "target": "ESNEXT", // 3. 사용할 ES 버전
+    "experimentalDecorators": true, // 4. 데코레이터를 사용할지 여부
+    "emitDecoratorMetadata": true // 5. 데코레이터의 메타 데이터를 같이 내보낼지 여부
+  }
+}
+
+// 1. 타임스크립트의 컴파일러 옵션은 compilerOptions에 설정합니다.
+// 2. 컴파일 시 모듈 시스템을 선택할 수 있으며 NodeJS의 모듈 시스템은 CommonJS이므로 CommonJS로 넣어줍니다.
+// 3. target에는 컴파일 시 사용할 ECMA 버전을 적어줍니다. ESNEXT를 설정하면 최신 버전으로 컴파일을 해줍니다.
+// 4. experimaentalDecorators와 emitDecoratorMetadata는 데코레이터 관련 부분입니다. NestJS에서는 데코레이터를 매우 매우 많이 사용하므로 꼭 필요한 옵션이라고 할 수 있습니다.
+// 4. experimaentalDecorators는 데코레이터를 사용할지 여부입니다. 타임스크립트 5.0 버전부터 정식으로 지원합니다.
+// 5. emitDecoratorMetadata는 타임스크립트를 자바스크립트로 컴파일 시 데코레이터가 설정된 클래스, 함수, 변수, 객체의 메타 데이터를 함께 넣어줄지 여부를 선택합니다.
+//    메타 데이터는 데코레이터를 달아준 곳이 함수인지, 클래스인지 변수인지에 대한 여부와 매개변수가 있다면 해당 타입, 그리고 결괏값을 포함합니다. 메타 데이터를 넣을 때
+//    의존성 패키지로 설치한 reflect-metadata가 사용됩니다. 즉 reflect-metadata와 emitDecoratorMetadata는 함께 설정이 되어야 합니다.
+// 타임스크립트 설정값 자체는 몇개 없습니다만, 모르고 사용하는 것보다는 알고 사용하는 것이 당연히 좋습니다.
